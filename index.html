@@ -1,100 +1,187 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<title>The First International Conference on Artificial Intelligence and Cyber Physical Systems (AICPS'25)</title>
+<title>LABTEC-IA, Laboratoire Technologique en intelligence Artificielle et sécurité alimentaire</title>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/.section {
+            display: none; /* Hide all sections by default */
+        }libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <style>
-body {
-font-family: "Lato", sans-serif;
-/*background-image: url("images/background.jpg");
-background-color: #cccccc;*/
-}
+body {font-family: "Lato", sans-serif}
 .mySlides {display: none}
-mybackground {
-background-image: url("images/conf_site_cover.jpg");
-}
+.mysection {display: none}
+#events { display: block}
 
 </style>
 </head>
-<body>
+<body class="bgteams">
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-light-grey w3-card">
-    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
-    <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
-    <a href="cfp.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CFP</a>
+  <div class="w3-bar w3-blue w3-card">
+    <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right " href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
+	
+    <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="showSection('events')">HOME</a>
+    <a href="#teams" class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick="showSection('teams')">TEAMS</a>
+	<a href="#events" class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick="showSection('events')">EVENTS</a>
+    <a href="#contact" class="w3-bar-item w3-button w3-padding-large w3-hide-small" onclick="showSection('contact')">CONTACT</a>
+	
     <div class="w3-dropdown-hover w3-hide-small">
-		<button class="w3-padding-large w3-button" title="More">COMMITTEES <i class="fa fa-caret-down"></i></button>
-		<!--<a href="#committees" class="w3-bar-item w3-button w3-padding-large w3-hide-small">COMMITTEES</a>-->
-		<div class="w3-dropdown-content w3-bar-block w3-card-4">
-			<a href="committees.html#HP" class="w3-bar-item w3-button">HONORARY PRESIDENTS</a>
-			<a href="committees.html#CC" class="w3-bar-item w3-button">GENERAL CHAIRS</a>
-			<a href="committees.html#OC" class="w3-bar-item w3-button">ORGANIZATION CHAIRS</a>
-			<a href="committees.html#SC" class="w3-bar-item w3-button">SCIENTIFIC COMMITTEE</a>
-		</div>
-	</div>
-	<a href="registration.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">REGISTRATION</a>
-	<div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
-		<a href="dates.html" class="w3-bar-item w3-button">IMPORTANT DATES</a>
-		<a href="contact.html" class="w3-bar-item w3-button">CONTACT</a>
+        <a href="#publications" class="w3-bar-item w3-button" onclick="showSection('publications')">Publications</a>
+        <a href="#about" class="w3-bar-item w3-button" onclick="showSection('about')">About</a>
       </div>
     </div>
-    <a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>
+    <!--<a href="javascript:void(0)" class="w3-padding-large w3-hover-red w3-hide-small w3-right"><i class="fa fa-search"></i></a>-->
   </div>
 </div>
 
 <!-- Navbar on small screens (remove the onclick attribute if you want the navbar to always show on top of the content when clicking on the links) -->
-<div id="navDemo" class="w3-bar-block w3-white w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
-  <a href="cfp.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CFP</a>
-  <a href="committees.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">COMMITTEES</a>
-  <a href="registration.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">REGISTRATION</a>
-  <a href="registration.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">IMPORTANT DATES</a>
-  <a href="contact.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+<div id="navDemo" class="w3-bar-block w3-blue w3-hide w3-hide-large w3-hide-medium w3-top" style="margin-top:46px">
+  
+  <a href="#teams" class="w3-bar-item w3-button w3-padding-large" onclick="showSection2('teams')">TEAMS</a>
+  <a href="#events" class="w3-bar-item w3-button w3-padding-large" onclick="showSection2('events')">EVENTS</a>
+  <a href="#contact" class="w3-bar-item w3-button w3-padding-large" onclick="showSection2('contact')">CONTACT</a>
+  
 </div>
 
 <!-- Page content -->
-<div class="w3-content " style="max-width:2000px;margin-top:46px">
+<div class="w3-content" style="max-width:2000px;margin-top:46px">
 
   <!-- Automatic Slideshow Images -->
   <div class="mySlides w3-display-container w3-center">
-    <img src="images/slides/conf_site_cover.jpg" style="width:100%">
-    <div class="w3-display-topmiddle w3-container w3-text-white w3-padding-32">
-		<h1 class="w3-large w3-animate-right">The First International Conference on Artificial Intelligence and Cyber Physical Systems (AICPS'25)</h1>
-		<hr class="w3-border-grey" style="margin:auto;width:40%">
-		<p class="w3-large w3-opacity w3-animate-left">Comming soon!</p> 
-		
+    <img src="images/site_cover.jpg" style="width:100%; height:70%;" >
+    <div class="w3-display-topright w3-container w3-text-blue w3-padding-32 w3-hide-small">
+      <!--<h3>LABTEC-IA</h3>-->
+      <p><b>Laboratoire Technologique en intelligence Artificielle et sécurité alimentaire</b></p>
+    </div>
+  </div>
+  <!--<div class="mySlides w3-display-container w3-center">
+    <img src="images/site_cover.jpg" style="width:100%" >
+    <div class="w3-display-topright w3-container w3-text-blue w3-padding-32 w3-hide-small">
+      <h3>LABTEC-IA</h3>
+      <p><b>Exacte Sciences Faculty</b></p>   
     </div>
   </div>
   <div class="mySlides w3-display-container w3-center">
-    <img src="images/slides/mascara.jpg" style="width:100%">
-    <div class="w3-display-topmiddle w3-container w3-text-white w3-padding-32 ">
-		<h1 class="w3-large w3-animate-right w3-text-blue">The First International Conference on Artificial Intelligence and Cyber Physical Systems (AICPS'25)</h1>
-		<hr class="w3-border-grey" style="margin:auto;width:40%">
-		<p class="w3-large w3-opacity w3-text-blue">Comming soon!</p> 
-		
+    <img src="images/site_cover.jpg" style="width:100% " >
+    <div class="w3-display-topright w3-container w3-text-blue w3-padding-32 w3-hide-small">
+      <!--<h3>LABTEC-IA</h3>
+      <p><b>University of Mustapha Stambouli, Mascara, Algeria</b></p> 
+    </div>
+  </div>-->
+
+  <!-- The TEAMS Section -->
+  <br>
+  <div class="w3-container w3-content w3-center w3-padding-64 w3-animate-top  mysection" style="max-width:1200px" id="teams">
+    <h2 class="w3-wide">TEAMS</h2>
+    <!--<p class="w3-opacity"><i>LABTEC-IA</i></p>-->
+    <p class="w3-justify">LABTEC-IA includes 04 teams:</p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-single w3-card-2 w3-round-xlarge w3-padding-16">
+        <p class="w3-blue">Team 1 : Intelligent Water Resources and Irrigation Management (IWRIM)</p>
+		<p>Team head : Pr Kamel Benhaoua</p>
+        <img src="teams/iwrim/iwrim.jpg" class="w3-round w3-margin-bottom" alt="Team 1" style="width:60%">
+		<p class="w3-opacity w3-orange"><a href="teams/iwrim/index.html">Read more..</a></p>
+      </div>
+	  <br/>
+      <div class="w3-single w3-card-2 w3-round-xlarge w3-padding-16">
+        <p class="w3-blue">Team 2 : Smart Distributed and Pervasive Systems (SDPS)</p>
+		<p>Team head : Dr Meriem Medber</p>
+        <img src="teams/sdps/sdps.jpg" class="w3-circle w3-margin-bottom" alt="Team 2" style="width:60%">
+		<p class="w3-opacity w3-orange"><a href="teams/sdps/index.html">Read more..</a></p>
+      </div>
+	  <br/>
+      <div class="w3-single w3-card-2 w3-round-xlarge w3-padding-16">
+        <p class="w3-blue">Team 3 : Food Safety and Contaminant Monitoring (FSCM)</p>
+		<p>Team head : Dr Mohammed Hadjari</p>
+        <img src="images/labtec-ia_logo.png" class="w3-circle w3-margin-bottom" alt="Team 1" style="width:60%">
+		<p class="w3-opacity w3-orange"><a href="teams/fscm.html">Read more..</a></p>
+      </div>
+	  <br/>
+	  <div class="w3-single w3-card-2 w3-round-xlarge w3-padding-16">
+        <p class="w3-blue">Team 4 : Using AI Techniques in Information Security (AIIS)</p>
+		<p>Team head : Dr Mohammed Zagane</p>
+        <img src="teams/aiis/aiis.jpg" class="w3-round w3-margin-bottom" alt="Team 1" style="width:60%">
+		<p class="w3-opacity w3-orange"><a href="teams/aiis/index.html">Read more..</a></p>
+      </div>
+	  <br/>
+    </div>
+  </div>
+  <br>
+
+<!-- The events Section -->
+  <div class="w3-container w3-content w3-center w3-padding-64 w3-animate-top mysection" style="max-width:1200px" id="events">
+    <h2 class="w3-wide w3-text-blue">Latest news</h2>
+    <div class="w3-row w3-padding-32">
+      
+	  
+	  <div class="w3-single w3-card-2 w3-round-xlarge">
+        <br>
+		<p class=" w3-text-blue">Highlights from the valorization day organised by LABTEC-IA and the the Thematic  Research Agency in Health and Life Sciences</p>
+        <img src="events/pnr_project_2024/day_end_1.jpg" class="w3-round w3-margin-bottom" alt="ECO-GIRE project" style="width:60%">
+		<img src="events/pnr_project_2024/day_end_2.jpg" class="w3-round w3-margin-bottom" alt="ECO-GIRE project" style="width:60%">
+		<p class="w3-opacity w3-orange"><a href="https://www.facebook.com/share/p/Gv5pJBkLiNRM3T1k/">Read more..</a></p>
+		<br>
+      </div>
+	  
+	  <div class="w3-single w3-card-2 w3-round-xlarge">
+        <br>
+		<p class=" w3-text-blue">Day of valorizating the first year of the PNR project results</p>
+        <img src="events/pnr_project_2024/day_val_pnr_project_2024.jpg" class="w3-round w3-margin-bottom" alt="ECO-GIRE project" style="width:60%">
+		<p class="w3-opacity w3-orange"><a href="events/pnr_project_2024/day_val_pnr_project_2024.jpg">Read more..</a></p>
+		<br>
+      </div>
+	  <br>
+	  <div class="w3-single w3-card-2 w3-round-xlarge">
+        <br>
+		<p class=" w3-text-blue">Workshop on : programming of real time embedded systems and advanced configuration of IoT devices</p>
+        <img src="events/workshop_2024/workshop_2024.jpg" class="w3-round w3-margin-bottom" alt="workshop 2024" style="width:60%">
+		<p class="w3-opacity w3-orange"><a href="events/workshop_2024/index.html">Read more..</a></p>
+		<br>
+      </div>
+	  
+    </div>
+  </div> 
+
+  
+  <!-- The Contact Section -->
+  <div class="w3-container w3-content w3-padding-64 w3-animate-top mysection" style="max-width:1200px" id="contact">
+    <h2 class="w3-wide w3-center">CONTACT</h2>
+    <p class="w3-opacity w3-center"><i>To contact us, please use the following information:</i></p>
+    <div class="w3-row w3-padding-32">
+      <div class="w3-col m6 w3-large w3-margin-bottom">
+        <i class="fa fa-map-marker" style="width:30px"></i> University of Mustapha Stambouli, Mascara, Algeria<br>
+        <i class="fa fa-phone" style="width:30px"></i> Phone: +213 0559077751<br>
+        <i class="fa fa-envelope" style="width:30px"> </i> Email: labtec-ia@univ-mascara.dz<br>
+      </div>
     </div>
   </div>
   
-  
-    
 <!-- End Page Content -->
 </div>
 
-<!-- Image of location/map 
-<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
+<!-- Image of location/map -->
+<!--<img src="/w3images/map.jpg" class="w3-image w3-greyscale-min" style="width:100%">
 -->
 <!-- Footer -->
 <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
-  <i class="fa fa-facebook-official w3-hover-opacity"></i>
-  <i class="fa fa-linkedin w3-hover-opacity"></i>
+  
+  <p class="w3-opacity w3-center"><i>Our pages on social media:</i></p>
+  
+  <a href="https://www.facebook.com/profile.php?id=61567079515100" target="_blank">
+    <i class="fa fa-facebook-official w3-hover-opacity"></i>
+  </a>
+  
+  <a href="https://www.linkedin.com/company/labtec-ia/" target="_blank">
+    <i class="fa fa-linkedin w3-hover-opacity"></i>
+  </a>
+  
   <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
 </footer>
 
@@ -125,6 +212,37 @@ function myFunction() {
   }
 }
 
+function showSection(sectionId) 
+{
+            // Hide all sections
+            const sections = document.querySelectorAll('.mysection');
+            sections.forEach(section => {
+                section.style.display = 'none';
+            });
+
+            // Show the selected section
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+}
+
+function showSection2(sectionId) 
+{
+            myFunction();
+			// Hide all sections
+            const sections = document.querySelectorAll('.mysection');
+            sections.forEach(sec => {
+                sec.style.display = 'none';
+            });
+
+            // Show the selected section
+            const selectedSection = document.getElementById(sectionId);
+            if (selectedSection) {
+                selectedSection.style.display = 'block';
+            }
+}
+
 // When the user clicks anywhere outside of the modal, close it
 var modal = document.getElementById('ticketModal');
 window.onclick = function(event) {
@@ -132,6 +250,8 @@ window.onclick = function(event) {
     modal.style.display = "none";
   }
 }
+
+
 </script>
 
 </body>
