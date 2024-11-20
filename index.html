@@ -5,26 +5,93 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-body {
-font-family: "Lato", sans-serif;
-/*background-image: url("images/background.jpg");
-background-color: #cccccc;*/
-}
+     body {
+      font-family: "Roboto";
+      margin: 0;
+      padding: 0;
+	  background-size: cover;
+  background-position: center;
+    }
+
+    * {
+      font-family: inherit; /* Ensures all elements inherit from body */
+    }
 .mySlides {display: none}
-mybackground {
-background-image: url("images/conf_site_cover.jpg");
+.mybackground {
+ background-size: cover;
+  background-position: center;
 }
+
+.w3-top {
+  position: fixed; /* Keep the navbar at the top */
+  width: 100%; /* Full width of the screen */
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.w3-bar {
+  background-color: #f1f1f1; /* Use a light color for w3-dark-white */
+  transition: none; /* Prevent any transition effects */
+}
+
+/* Ensure the color remains constant on scroll */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+.footer {
+    text-align: center; /* Centers the entire content horizontally */
+}
+
+.partners {
+    display: inline-block; /* Ensures logos stay together */
+    text-align: center; /* Centers logos within the block */
+}
+
+.logo-container {
+    display: inline-block;
+    margin: 10px; /* Adds spacing between logos */
+}
+
+.logo-container img {
+    width: 120px; /* Adjust logo width */
+    height: 50px; /* Adjust logo height */
+    object-fit: contain; /* Ensures the logos maintain their aspect ratio */
+}
+
+.custom-button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  background-color: #575859; /* Gold color */
+  text-decoration: none;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  border-radius: 20px; /* Rounded edges */
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Slight shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #4194fa; /* Slightly darker gold on hover */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
 
 </style>
 </head>
-<body>
+<body style="font-family: 'Roboto'">
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-blue-gray w3-card">
+  <div class="w3-bar w3-dark-white w3-card" >
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     <a href="cfp.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CFP</a>
@@ -43,6 +110,7 @@ background-image: url("images/conf_site_cover.jpg");
 	<a href="registration.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">REGISTRATION</a>
 	<a href="cprogram.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROGRAM</a>
 	<a href="jpublication.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">JOURNAL PUBLICATION</a>
+	<a href="mascara.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">MASCARA</a>
 	
 	<div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
@@ -51,7 +119,7 @@ background-image: url("images/conf_site_cover.jpg");
 		<a href="contact.html" class="w3-bar-item w3-button">CONTACT</a>
       </div>
     </div>
-    <a href="mascara.html" class="w3-padding-large w3-hover-red w3-hide-small w3-right">Mascara</a>
+  
   </div>
 </div>
 
@@ -62,180 +130,275 @@ background-image: url("images/conf_site_cover.jpg");
   <a href="registration.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">REGISTRATION</a>
   <a href="registration.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">IMPORTANT DATES</a>
   <a href="contact.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
+
 </div>
 
 <!-- Page content -->
-<div class="w3-content " style="max-width:2000px;margin-top:46px">
+<div class="w3-content " style="max-width:2000px;margin-top:46px;">
+
+	<header class="header">
+		<div class="overlay" style="background-image: url('images/slides/conf_site_cover.jpg');">
+			<div class="content">
+				<img src="images/logo.png" />
+				<h1 class="title" style="">The First International Conference on Artificial Intelligence and Cyber Physical Systems (AICPS'25)</h1>
+				<p class="date">January 29–30th, 2025</p>
+				<p class="location">Location: Mascara University, Mascara, Algeria</p>
+				<div class="buttons">
+					<a href="#" class="custom-button">Call for Papers</a>
+				</div>
+			</div>
+		</div>
+		<br><br><br>
+	</header>
+	
+	<style>
+		.header {
+			position: relative;
+			width: 100%;
+			height: 100vh; /* Full viewport height */
+			display: flex;
+			justify-content: center;
+			align-items: center;
+			text-align: center;
+		}
+	
+		.overlay {
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			bottom: 0;
+			background-size: cover;
+			background-position: center;
+			display: flex;
+			justify-content: center;
+			align-items: center;
+		}
+	
+		.content {
+			z-index: 1;
+			color: white; /* Make sure text stands out on background */
+		}
+	
+		.title {
+    margin: 0;
+    font-size: 2.5rem; /* Default font size for larger screens */
+    margin-bottom: 10px;
+    font-weight: 700;
+    text-transform: uppercase;
+}
+
+@media (max-width: 1024px) {
+    .title {
+        font-size: 2rem; /* Adjust font size for tablets or smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .title {
+        font-size: 1.8rem; /* Adjust font size for mobile devices */
+        margin-bottom: 8px; /* Reduce bottom margin for smaller screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .title {
+        font-size: 1.5rem; /* Smaller font size for very small screens */
+        margin-bottom: 5px; /* Further reduce bottom margin */
+    }
+}
+
+	
+		.date, .location {
+			font-size: 1.2rem;
+			margin-bottom: 5px;
+		}
+	
+		.buttons {
+			margin-top: 20px;
+		}
+	
+		.custom-button {
+			background-color: #007bff;
+			color: white;
+			padding: 10px 20px;
+			text-decoration: none;
+			border-radius: 5px;
+			font-size: 1.2rem;
+			display: inline-block;
+		}
+	
+		.custom-button:hover {
+			background-color: #0056b3;
+		}
+	</style>
+	
+	<div class="footer">
+		<h6 class="title" style="font-size: 1.5em;">Sponsors</h3>
+		<br><br><br>
+	
+		<div class="partners">
+			<div class="logo-container">
+				<img src="images/logo univ.jpg" alt="University Logo">
+			</div>
+			<div class="logo-container">
+				<img src="images/dgrsdt.jpg" alt="DGRSDT Logo">
+			</div>
+			<div class="logo-container">
+				<img src="images/atrss.jpg" alt="ATRSS Logo">
+			</div>
+			<div class="logo-container">
+				<img src="images/pnr.jpg" alt="PNR Logo">
+			</div>
+			<div class="logo-container">
+				<img src="images/hc.jpg" alt="HC Logo">
+			</div>
+			<div class="logo-container">
+		<!--	<img src="images/ieee.png" alt="IEEE Logo"> -->	
+			</div>
+			<div class="logo-container">
+		<!--		<img src="images/ieee1.png" alt="IEEE Alt Logo"> -->	
+			</div>
+		</div>
+		<br><br><br>
+	</div>
+	
+	
 
   <!-- Automatic Slideshow Images -->
-  
-  <!-- Slide1 -->
-  <div class="mySlides w3-display-container w3-center">
-    <img src="images/slides/conf_site_cover.jpg" style="width:100%">
-    <div class="w3-display-topmiddle w3-container w3-text-white w3-padding-8">
-		<h1 class="w3-large w3-animate-right">The First International Conference on Artificial Intelligence and Cyber Physical Systems (AICPS'25)</h1>
-		<hr class="w3-border-grey" style="margin:auto;width:40%">
-		<p class="w3-large ">November, 02 and 03, 2025</p>
-		
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<br>
-		<h1 class="w3-large w3-animate-right">Sponsors :</h1>
-		<img src="images/sponsors.png" style="width:100%" class="w3-animate-right">
-		
-		
-		
-    </div>
-  </div>
-  <!-- End Slide1 -->
-  
-  <!-- Slide2 -->
-  <div class="mySlides w3-display-container w3-center ">
-    <img src="images/slides/conf_site_cover.jpg" style="width:100%">
-	
-	<div class="w3-display-topmiddle w3-container w3-text-white w3-padding-8 w3-hide-large" style="width:100%">
-		<h1 class="w3-large w3-animate-right">Honorary chairs:</h1>
-		<hr class="w3-border-grey" style="margin:auto;width:40%">
-		<p class="w3-small">Pr. BOUADI Abed</p>
-		<p class="w3-opacity w3-small">Rector of Mustapha Stambouli University</p>
-		<p class="w3-small">Pr. MOKHTARI Faicel</p>
-		<p class="w3-opacity w3-small">Vice-Rector, Mustapha Stambouli University</p>
-		<p class="w3-small">Dr. BEKHTI Mohammed</p>
-		<p class="w3-opacity w3-small">Dean of the Exacte Sciences Faculty</p>
-		
-    </div>
-	
-    <div class="w3-display-topmiddle w3-container w3-text-white w3-padding-32 ">
-		<div class="w3-row w3-padding-32 w3-animate-right w3-hide-small w3-hide-medium" >
-			<h3 class="w3-hoverable">Honorary chairs</h3>
-			<hr>
-			<br>
-			<div class="w3-third">
-				<img src="images/members/rector.jpg" class="w3-circle w3-margin-bottom w3-hover-shadow" alt="Pr. BOUADI Abed" style="width:55%">
-				<p>Pr. BOUADI Abed</p>
-				<p class="w3-opacity">Rector of Mustapha Stambouli University, Mascara</p>
-			</div>
-			<div class="w3-third">
-				<img src="images/members/vice_rector.jpg" class="w3-circle w3-margin-bottom w3-hover-shadow" alt="Pr. BOUADI Abed" style="width:50%">
-				<p>Pr. MOKHTARI Faicel</p>
-				<p class="w3-opacity">Vice-Rector, Mustapha Stambouli University, Mascara</p>
-			</div>
-			<div class="w3-third">
-				<img src="images/members/dean.jpg" class="w3-circle w3-margin-bottom w3-hover-shadow" alt="Pr. BOUADI Abed" style="width:50%">
-				<p>Dr. BEKHTI Mohammed</p>
-				<p class="w3-opacity">Dean of the Exacte Sciences Faculty, Mustapha Stambouli University, Mascara</p>
-			</div>
-		
-		</div>
-		
-    </div>
-  </div>
-  
-  <!-- End Slide2 -->
-  
- <!-- Slide3 -->
- <div class="mySlides w3-display-container w3-center ">
-    <img src="images/slides/conf_site_cover.jpg" style="width:100%">
-	
-	<div class="w3-display-topmiddle w3-container w3-text-white w3-padding-8 w3-hide-large" style="width:100%">
-		<h1 class="w3-large w3-animate-right">General chairs:</h1>
-		<hr class="w3-border-grey" style="margin:auto;width:40%">
-		<p class="w3-small">Pr. Kamel Benhaoua</p>
-		<p class="w3-opacity w3-small">University of Mascara, Algeria</p>
-		<p class="w3-small">Pr. Carlos Tavares Calafate</p>
-		<p class="w3-opacity w3-small">University of Valencia, Spain</p>
-		<p class="w3-small">Pr. Benaoumeur Senouci</p>
-		<p class="w3-opacity w3-small">University of Southern Denmark, Denmark</p>
-		
-    </div>
-	
-	<div class="w3-display-topmiddle w3-container w3-text-white w3-padding-32 ">
-	  <div class="w3-row w3-padding-32 w3-animate-right w3-hide-small w3-hide-medium" >
-		<h3 class="w3-hoverable">General Chairs</h3>
-		<hr>
-		<br>
-		<div class="w3-third">
-			
-			<img src="images/members/benhaoua-kamal.jpg" class="w3-circle  w3-margin-top w3-hover-shadow" alt="Pr. K. Benhaoua" style="width:60%">
-			<p>Pr. Kamel Benhaoua</p>
-			<hr class="w3-border-grey" style="margin:auto;width:40%">
-			<p class="w3-opacity">University of Mascara, Algeria</p>
-		</div>
-		<div class="w3-third">
-			
-			<img src="images/members/prof_c-t-calafate.jpg" class="w3-circle w3-margin-top w3-hover-shadow" alt="Pr. Carlos Tavares Calafate" style="width:60%">
-			<p>Pr. Carlos Tavares Calafate</p>
-			<hr class="w3-border-grey" style="margin:auto;width:40%">
-			<p class="w3-opacity">University of Valencia, Spain</p>
-		</div>
-		<div class="w3-third">
-			
-			<img src="images/members/b.senouci.jpg" class="w3-circle w3-margin-top w3-hover-shadow" alt="Pr. Benaoumeur Senouci" style="width:60%">
-			<p>Pr. Benaoumeur Senouci </p>
-			<hr class="w3-border-grey" style="margin:auto;width:40%">
-			<p class="w3-opacity">University of Southern Denmark, Denmark</p>
-		</div>
-    </div>
-	
-  </div>
-</div>
-<!-- End Slide3 -->  
+  <div>
 
-  <!-- Slide4 -->
-  <div class="mySlides w3-display-container w3-center ">
-    <img src="images/slides/conf_site_cover.jpg" style="width:100%">
-	
-	<div class="w3-display-topmiddle w3-container w3-text-white w3-padding-8 w3-hide-large" style="width:100%">
-		<h1 class="w3-large w3-animate-right">Keynote Speakers:</h1>
+	<!-- Slide1 -->
+	<div class="mySlides w3-display-container w3-center w3-hide-small w3-hide-medium">
+	  <img class="conf_site_cover" src="images/slides/conf_site_cover.jpg" style="width:100%">
+	  <div class="w3-display-topmiddle w3-container w3-text-white w3-padding-8">
+		<p class="w3-large w3-animate-right" style="font-family: 'Montserrat', sans-serif;font-weight: 700;font-size: 120px;line-height: 1.8;letter-spacing: -0.5px;">The First International Conference on Artificial Intelligence and Cyber Physical Systems (AICPS'25)</p>
 		<hr class="w3-border-grey" style="margin:auto;width:40%">
-		<p class="w3-small">Pr. Carlos tavares Calafate</p>
-		<p class="w3-opacity w3-small">University of Valencia, Spain</p>
-		<p class="w3-small">Pr. Mamdouh Alenezi</p>
-		<p class="w3-opacity w3-small">Prince Sultan University, KSA</p>		
-		<p class="w3-small">Pr. Abderrahmane Lakas</p>
-		<p class="w3-opacity w3-small">UAE University, UAE</p>
-    </div>
-	
-    <div class="w3-display-topmiddle w3-container w3-text-white w3-padding-32 ">
-		<div class="w3-row w3-padding-32 w3-animate-right w3-hide-small w3-hide-medium" >
-			<h3 class="w3-hoverable">Keynote Speakers:</h3>
-			<hr>
-			<br>
-			<div class="w3-third">
-				<img src="images/members/prof_c-t-calafate.jpg" class="w3-circle w3-margin-top w3-hover-shadow" alt="Pr. Carlos Tavares Calafate" style="width:60%">
-				<p>Pr. Carlos Tavares Calafate</p>
-				<hr class="w3-border-grey" style="margin:auto;width:40%">
-				<p class="w3-opacity">University of Valencia, Spain</p>
-			</div>
-			<div class="w3-third">
-				<img src="images/members/mamdouh_alenezi.jpg" class="w3-circle w3-margin-bottom w3-hover-shadow" alt="Pr. Mamdouh Alenezi" style="width:50%">
-				<p>Pr. Mamdouh Alenezi</p>
-				<hr class="w3-border-grey" style="margin:auto;width:40%">
-				<p class="w3-opacity">Prince Sultane University, KSA</p>
-			</div>
-			
-			<div class="w3-third">
-				<img src="images/members/a_lakas.jpg" class="w3-circle w3-margin-bottom w3-hover-shadow" alt="Pr. Abderrahmane Lakas" style="width:50%">
-				<p>Pr. Abderrahmane Lakas</p>
-				<hr class="w3-border-grey" style="margin:auto;width:40%">
-				<p class="w3-opacity">UAE University, UAE</p>
-			</div>
-		
+		<p class="w3-large" style="font-family: 'Roboto'; font-size:medium; font-weight: 500;">November, 02 and 03, 2025</p>
+  
+		<br><br>
+  
+		<h1 class="w3-large w3-animate-right" style="font-family: 'Roboto'; font-size:medium; font-weight: 500;">Sponsors :</h1>
+		<div class="partners" style="background-color: #ffffff;">
+		  <div class="logo-container">
+			<img src="images/logo univ.jpg" alt="University Logo">
+		  </div>
+		  <div class="logo-container">
+			<img src="images/dgrsdt.jpg" alt="DGRSDT Logo">
+		  </div>
+		  <div class="logo-container">
+			<img src="images/atrss.jpg" alt="ATRSS Logo">
+		  </div>
+		  <div class="logo-container">
+			<img src="images/pnr.jpg" alt="PNR Logo">
+		  </div>
+		  <div class="logo-container">
+			<img src="images/hc.jpg" alt="HC Logo">
+		  </div>
+		  <div class="logo-container">
+			<img src="images/ieee.png" alt="IEEE Logo">
+		  </div>
+		  <div class="logo-container">
+			<img src="images/ieee1.png" alt="IEEE Alt Logo">
+		  </div>
 		</div>
-		
-    </div>
+	  </div>
+	</div>
+	<!-- End Slide1 -->
+	
+	<!-- Slide2 -->
+	<div class="mySlides w3-display-container w3-center w3-hide-small w3-hide-medium" style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">
+	  <img src="images/slides/conf_site_cover.jpg" style="width:100%">
+  
+	  <!-- Mobile and Tablet View -->
+	  <div class="w3-display-topmiddle w3-container w3-text-white w3-padding-8 w3-hide-large" style="width:100%">
+		<h1 class="w3-large w3-animate-right" style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">Honorary chairs:</h1>
+		<hr class="w3-border-grey" style="margin:auto;width:40%">
+		<p class="w3-small" style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">Pr. BOUADI Abed</p>
+		<p class="w3-opacity w3-small" style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">Rector of Mustapha Stambouli University</p>
+		<p class="w3-small" style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">Pr. MOKHTARI Faicel</p>
+		<p class="w3-opacity w3-small" style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">Vice-Rector, Mustapha Stambouli University</p>
+		<p class="w3-small" style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">Dr. BEKHTI Mohammed</p>
+		<p class="w3-opacity w3-small" style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">Dean of the Exact Sciences Faculty</p>
+	  </div>
+  
+	  <!-- Larger Screens -->
+	  <div class="w3-display-topmiddle w3-container w3-text-white w3-padding-32">
+		<div class="w3-row w3-padding-32 w3-animate-right">
+		  <h3 class="w3-hoverable" style="font-family: 'Roboto'; font-size: medium; font-weight: 500; text-align: center;">Honorary chairs</h3>
+		  <hr style="display: none; width: 60%; margin: 0 auto;">
+		  <div class="w3-row w3-padding-top">
+			<!-- Rector Image -->
+			<div class="w3-col w3-third w3-center">
+			  <img src="images/members/rector.jpg" class="w3-circle w3-margin-bottom w3-hover-shadow" alt="Pr. BOUADI Abed" style="width:100px; height:100px; object-fit:cover; margin-bottom: 15px;">
+			  <p style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">Pr. BOUADI Abed</p>
+			  <p class="w3-opacity" style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">Rector of Mustapha Stambouli University, Mascara</p>
+			</div>
+			<!-- Vice-Rector Image -->
+			<div class="w3-col w3-third w3-center">
+			  <img src="images/members/vice_rector.jpg" class="w3-circle w3-margin-bottom w3-hover-shadow" alt="Pr. MOKHTARI Faicel" style="width:100px; height:100px; object-fit:cover; margin-bottom: 15px;">
+			  <p style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">Pr. MOKHTARI Faicel</p>
+			  <p class="w3-opacity" style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">Vice-Rector, Mustapha Stambouli University, Mascara</p>
+			</div>
+			<!-- Dean Image -->
+			<div class="w3-col w3-third w3-center">
+			  <img src="images/members/dean.jpg" class="w3-circle w3-margin-bottom w3-hover-shadow" alt="Dr. BEKHTI Mohammed" style="width:100px; height:100px; object-fit:cover; margin-bottom: 15px;">
+			  <p style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">Dr. BEKHTI Mohammed</p>
+			  <p class="w3-opacity" style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">Dean of the Exact Sciences Faculty, Mustapha Stambouli University, Mascara</p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<!-- End Slide2 -->
+  
+	<!-- Slide3 -->
+	<div class="mySlides w3-display-container w3-center w3-hide-small w3-hide-medium" style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">
+	  <img src="images/slides/conf_site_cover.jpg" style="width:100%">
+  
+	  <!-- Mobile and Tablet View -->
+	  <div class="w3-display-topmiddle w3-container w3-text-white w3-padding-8 w3-hide-large" style="width:100%">
+		<h1 class="w3-large w3-animate-right" style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">General chairs:</h1>
+		<hr class="display: none; w3-border-grey" style="margin:auto;width:40%">
+		<p class="w3-small" style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">Pr. Kamel Benhaoua</p>
+		<p class="w3-opacity w3-small" style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">University of Mascara, Algeria</p>
+		<p class="w3-small" style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">Pr. Carlos Tavares Calafate</p>
+		<p class="w3-opacity w3-small" style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">University of Valencia, Spain</p>
+		<p class="w3-small" style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">Pr. Benaoumeur Senouci</p>
+		<p class="w3-opacity w3-small" style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">University of Southern Denmark, Denmark</p>
+	  </div>
+  
+	  <!-- Larger Screens -->
+	  <div class="w3-display-topmiddle w3-container w3-text-white w3-padding-32">
+		<div class="w3-row w3-padding-32 w3-animate-right">
+		  <h3 class="w3-hoverable" style="font-family: 'Roboto'; font-size: medium; font-weight: 500; text-align: center;">General Chairs</h3>
+		  <hr style="display: none; width: 60%; margin: 0 auto;">
+		  <div class="w3-row w3-padding-top">
+			<!-- Kamel Benhaoua Image -->
+			<div class="w3-col w3-third w3-center">
+			  <img src="images/members/benhaoua-kamal.jpg" class="w3-circle w3-margin-bottom w3-hover-shadow" style="width:100px; height:100px; object-fit:cover; margin-bottom: 15px;" alt="Pr. Kamel Benhaoua">
+			  <p style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">Pr. Kamel Benhaoua</p>
+			  <p class="w3-opacity" style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">University of Mascara, Algeria</p>
+			</div>
+			<!-- Carlos Tavares Image -->
+			<div class="w3-col w3-third w3-center">
+			  <img src="images/members/prof_c-t-calafate.jpg" class="w3-circle w3-margin-bottom w3-hover-shadow" style="width:100px; height:100px; object-fit:cover; margin-bottom: 15px;" alt="Pr. Carlos Tavares Calafate">
+			  <p style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">Pr. Carlos Tavares Calafate</p>
+			  <p class="w3-opacity" style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">University of Valencia, Spain</p>
+			</div>
+			<!-- Benaoumeur Senouci Image -->
+			<div class="w3-col w3-third w3-center">
+			  <img src="images/members/b.senouci.jpg" class="w3-circle w3-margin-bottom w3-hover-shadow" style="width:100px; height:100px; object-fit:cover; margin-bottom: 15px;" alt="Pr. Benaoumeur Senouci">
+			  <p style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">Pr. Benaoumeur Senouci</p>
+			  <p class="w3-opacity" style="font-family: 'Roboto'; font-size: medium; font-weight: 500;">University of Southern Denmark, Denmark</p>
+			</div>
+		  </div>
+		</div>
+	  </div>
+	</div>
+	<!-- End Slide3 -->
   </div>
   
-  <!-- End Slide4 -->
-  
-    
 <!-- End Page Content -->
 </div>
 
@@ -253,8 +416,7 @@ background-image: url("images/conf_site_cover.jpg");
   <a href="https://www.linkedin.com/company/labtec-ia/" target="_blank">
     <i class="fa fa-linkedin w3-hover-opacity"></i>
   </a>
-  <p class="w3-small">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
+  </footer>
 
 <script>
 // Automatic Slideshow - change image every 4 seconds

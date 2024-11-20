@@ -7,24 +7,95 @@
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
 <style>
-body {
-font-family: "Lato", sans-serif;
-/*background-image: url("images/background.jpg");
-background-color: #cccccc;*/
-}
+     body {
+      font-family: "Roboto";
+      margin: 0;
+      padding: 0;
+	  background-size: cover;
+  background-position: center;
+    }
+
+    * {
+      font-family: inherit; /* Ensures all elements inherit from body */
+    }
 .mySlides {display: none}
-mybackground {
-background-image: url("images/conf_site_cover.jpg");
+.mybackground {
+ background-size: cover;
+  background-position: center;
 }
+
+.w3-top {
+  position: fixed; /* Keep the navbar at the top */
+  width: 100%; /* Full width of the screen */
+  z-index: 1000; /* Ensure it stays above other elements */
+}
+
+.w3-bar {
+  background-color: #f1f1f1; /* Use a light color for w3-dark-white */
+  transition: none; /* Prevent any transition effects */
+}
+
+/* Ensure the color remains constant on scroll */
+body {
+  margin: 0;
+  padding: 0;
+}
+
+
+.footer {
+    text-align: center; /* Centers the entire content horizontally */
+}
+
+.partners {
+    display: inline-block; /* Ensures logos stay together */
+    text-align: center; /* Centers logos within the block */
+}
+
+.logo-container {
+    display: inline-block;
+    margin: 10px; /* Adds spacing between logos */
+}
+
+.logo-container img {
+    width: 120px; /* Adjust logo width */
+    height: 50px; /* Adjust logo height */
+    object-fit: contain; /* Ensures the logos maintain their aspect ratio */
+}
+
+.custom-button {
+  display: inline-block;
+  padding: 10px 20px;
+  color: white;
+  background-color: #575859; /* Gold color */
+  text-decoration: none;
+  font-size: 1em;
+  font-family: Arial, sans-serif;
+  border-radius: 20px; /* Rounded edges */
+  text-align: center;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Slight shadow */
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.custom-button:hover {
+  background-color: #4194fa; /* Slightly darker gold on hover */
+  box-shadow: 0px 6px 8px rgba(0, 0, 0, 0.3); /* Stronger shadow on hover */
+}
+
 
 </style>
 </head>
-<body>
+<body style="font-family: 'Roboto'">
 
 <!-- Navbar -->
 <div class="w3-top">
-  <div class="w3-bar w3-blue-gray w3-card">
+  <div class="w3-bar w3-dark-white w3-card" >
     <a class="w3-bar-item w3-button w3-padding-large w3-hide-medium w3-hide-large w3-right" href="javascript:void(0)" onclick="myFunction()" title="Toggle Navigation Menu"><i class="fa fa-bars"></i></a>
     <a href="index.html" class="w3-bar-item w3-button w3-padding-large">HOME</a>
     <a href="cfp.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">CFP</a>
@@ -43,6 +114,8 @@ background-image: url("images/conf_site_cover.jpg");
 	<a href="registration.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">REGISTRATION</a>
 	<a href="cprogram.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">PROGRAM</a>
 	<a href="jpublication.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">JOURNAL PUBLICATION</a>
+	<a href="mascara.html" class="w3-bar-item w3-button w3-padding-large w3-hide-small">MASCARA</a>
+	
 	<div class="w3-dropdown-hover w3-hide-small">
       <button class="w3-padding-large w3-button" title="More">MORE <i class="fa fa-caret-down"></i></button>     
       <div class="w3-dropdown-content w3-bar-block w3-card-4">
@@ -50,7 +123,7 @@ background-image: url("images/conf_site_cover.jpg");
 		<a href="contact.html" class="w3-bar-item w3-button">CONTACT</a>
       </div>
     </div>
-    <a href="mascara.html" class="w3-padding-large w3-hover-red w3-hide-small w3-right">Mascara</a>
+  
   </div>
 </div>
 
@@ -59,18 +132,17 @@ background-image: url("images/conf_site_cover.jpg");
   <a href="cfp.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CFP</a>
   <a href="committees.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">COMMITTEES</a>
   <a href="registration.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">REGISTRATION</a>
-  <a href="dates.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">IMPORTANT DATES</a>
+  <a href="registration.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">IMPORTANT DATES</a>
   <a href="contact.html" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">CONTACT</a>
-  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MORE</a>
+  <a href="#" class="w3-bar-item w3-button w3-padding-large" onclick="myFunction()">MERCH</a>
 </div>
-
 <!-- Page content -->
 <div class="w3-content " style="max-width:2000px;margin-top:46px">
   <!-- The committees Section -->
   <br>
-  <div class="w3-container w3-content w3-center w3-padding-16 w3-card w3-blue-gray w3-animate-right mybackground w3-border w3-round-large" style="max-width:900px" id="committees">
+  <div class="w3-container w3-content w3-center w3-padding-16 w3-card w3-dark-white w3-animate-right mybackground w3-border w3-round-large" style="max-width:900px" id="committees">
     <h2 class="w3-wide w3-hoverable">Committees</h2>    
-	<div class="w3-row w3-padding-32  w3-blue-gray mybackground" id="HP">
+	<div class="w3-row w3-padding-32  w3-dark-white mybackground" id="HP">
 		<h3 class="w3-hoverable">Honorary chairs</h3>
 		<hr>
 		<br>
@@ -95,7 +167,7 @@ background-image: url("images/conf_site_cover.jpg");
 	<br id="CC"/>
 	<br/>
 	<br />
-	<div class="w3-row w3-padding-16  w3-blue-gray mybackground " id="CC">
+	<div class="w3-row w3-padding-16  w3-dark-white mybackground " id="CC">
 		<h3 class="w3-hoverable">General Chairs</h3>
 		<hr>
 		<br>
@@ -125,7 +197,7 @@ background-image: url("images/conf_site_cover.jpg");
 	<br id="OC"/>
 	<br/>
 	<br />
-	<div class="w3-row  w3-blue-gray  mybackground " id="OC">
+	<div class="w3-row  w3-dark-white  mybackground " id="OC">
 		<h3 class="w3-hoverable">Organization chairs</h3>
 		<hr>
 			
@@ -158,7 +230,7 @@ background-image: url("images/conf_site_cover.jpg");
 	<br id="PC"/>
 	<br/>
 	<br />
-	<div class="w3-row w3-padding-16  w3-blue-gray mybackground " id="PC">
+	<div class="w3-row w3-padding-16  w3-dark-white mybackground " id="PC">
 		<h3 class="w3-hoverable">Program chairs</h3>
 		<hr>
 		<div class="w3-third">
@@ -192,7 +264,7 @@ background-image: url("images/conf_site_cover.jpg");
 	<br id="PubC"/>
 	<br/>
 	<br />
-	<div class="w3-row w3-padding-16  w3-blue-gray mybackground " id="PubC">
+	<div class="w3-row w3-padding-16 w3-dark-white mybackground " id="PubC">
 		<h3 class="w3-hoverable">Publication chairs</h3>
 		<hr>
 		<div class="w3-third">
@@ -227,7 +299,7 @@ background-image: url("images/conf_site_cover.jpg");
 	<br id="SC"/>
 	<br/>
 	<br />
-	<div class=" w3-padding-16  w3-blue-gray mybackground" id="SC">
+	<div class=" w3-padding-16  w3-dark-white mybackground" id="SC">
 	  <h3 class="w3-hoverable">Steering Committee</h3>
 	  <hr>
       <div class="w3-single w3-middle ">
@@ -308,8 +380,7 @@ background-image: url("images/conf_site_cover.jpg");
 <footer class="w3-container w3-padding-64 w3-center w3-opacity w3-light-grey w3-xlarge">
   <i class="fa fa-facebook-official w3-hover-opacity"></i>
   <i class="fa fa-linkedin w3-hover-opacity"></i>
-  <p class="w3-medium">Powered by <a href="https://www.w3schools.com/w3css/default.asp" target="_blank">w3.css</a></p>
-</footer>
+ </footer>
 
 <script>
 // Automatic Slideshow - change image every 4 seconds
