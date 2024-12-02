@@ -127,6 +127,14 @@ h6 {
   margin-bottom: 10px;
 }
 
+.section-header h3 {
+  font-size: 20px;
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
 .section-header p {
   text-align: center;
   padding: 0;
@@ -693,6 +701,226 @@ body.mobile-nav-active #mobile-nav-toggle {
   margin-bottom: 20px;
   color: #fff;
 }
+/*--------------------------------------------------------------
+# hcommittees Section
+--------------------------------------------------------------*/
+
+#hcommittees {
+  padding: 60px 0 30px 0;
+}
+
+#hcommittees .speaker {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+#hcommittees .speaker .details {
+  background: rgba(6, 12, 34, 0.76);
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  right: 0;
+  text-align: center;
+  padding-top: 10px;
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#hcommittees .speaker .details h3 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+#hcommittees .speaker .details p {
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+#hcommittees .speaker .details .social {
+  height: 30px;
+}
+
+#hcommittees .speaker .details a {
+  color: #fff;
+}
+
+#hcommittees .speaker .details a:hover {
+  color: #f82249;
+}
+
+#hcommittees .speaker:hover .details {
+  bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# ocommittees Section
+--------------------------------------------------------------*/
+
+#ocommittees {
+  padding: 60px 0 30px 0;
+}
+
+#ocommittees .speaker {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+#ocommittees .speaker .details {
+  background: rgba(6, 12, 34, 0.76);
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  right: 0;
+  text-align: center;
+  padding-top: 10px;
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#ocommittees .speaker .details h3 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+#ocommittees .speaker .details p {
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+#ocommittees .speaker .details .social {
+  height: 30px;
+}
+
+#ocommittees .speaker .details a {
+  color: #fff;
+}
+
+#ocommittees .speaker .details a:hover {
+  color: #f82249;
+}
+
+#ocommittees .speaker:hover .details {
+  bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# pcommittees Section
+--------------------------------------------------------------*/
+
+#pcommittees {
+  padding: 60px 0 30px 0;
+}
+
+#pcommittees .speaker {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+#pcommittees .speaker .details {
+  background: rgba(6, 12, 34, 0.76);
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  right: 0;
+  text-align: center;
+  padding-top: 10px;
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#pcommittees .speaker .details h3 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+#pcommittees .speaker .details p {
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+#pcommittees .speaker .details .social {
+  height: 30px;
+}
+
+#pcommittees .speaker .details a {
+  color: #fff;
+}
+
+#pcommittees .speaker .details a:hover {
+  color: #f82249;
+}
+
+#pcommittees .speaker:hover .details {
+  bottom: 0;
+}
+
+/*--------------------------------------------------------------
+# gcommittees Section
+--------------------------------------------------------------*/
+
+#gcommittees {
+  padding: 60px 0 30px 0;
+}
+
+#gcommittees .speaker {
+  position: relative;
+  overflow: hidden;
+  margin-bottom: 30px;
+}
+
+#gcommittees .speaker .details {
+  background: rgba(6, 12, 34, 0.76);
+  position: absolute;
+  left: 0;
+  bottom: -30px;
+  right: 0;
+  text-align: center;
+  padding-top: 10px;
+  transition: all 300ms cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+#gcommittees .speaker .details h3 {
+  color: #fff;
+  font-size: 22px;
+  font-weight: 600;
+  margin-bottom: 5px;
+}
+
+#gcommittees .speaker .details p {
+  color: #fff;
+  font-size: 15px;
+  margin-bottom: 10px;
+  font-style: italic;
+}
+
+#gcommittees .speaker .details .social {
+  height: 30px;
+}
+
+#gcommittees .speaker .details a {
+  color: #fff;
+}
+
+#gcommittees .speaker .details a:hover {
+  color: #f82249;
+}
+
+#gcommittees .speaker:hover .details {
+  bottom: 0;
+}
+
 
 /*--------------------------------------------------------------
 # Speakers Section
