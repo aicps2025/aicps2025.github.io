@@ -7,6 +7,10 @@
   <meta content="width=device-width, initial-scale=1.0" name="viewport">
   <meta content="" name="keywords">
   <meta content="" name="description">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+
 
   <!-- Favicons -->
   <link href="img/favicon.png" rel="icon">
@@ -1752,6 +1756,27 @@ This presentation reviews the fundamentals of AI and deep learning, explores pra
 
   <!-- Template Main Javascript File -->
   <script src="js/main.js"></script>
+  
+  <script>
+(function() {
+  const allowedParent = "https://www.univ-mascara.dz";
+
+  try {
+    // Check if the site is loaded inside an iframe
+    if (window.self !== window.top) {
+      // Check the parent frame's origin 
+      const parent = document.referrer || '';
+      if (!parent.startsWith(allowedParent)) {
+        // Not allowed → break out of the frame
+        window.top.location = window.location.href;
+      }
+    }
+  } catch (e) {
+    // If we can’t check safely, just break out of any frame
+    window.top.location = window.location.href;
+  }
+})();
+</script>
 </body>
 
 </html>
